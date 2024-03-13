@@ -1,4 +1,4 @@
-import { Columns } from "@/interfaces/general"
+import { Columns } from "../interfaces/general"
 
 export const useTable = () => {   
     const columns: Columns = {
@@ -12,7 +12,7 @@ export const useTable = () => {
                 name: "Descripción"
             },
             {
-                id: "datestart",
+                id: "dateStart",
                 name: "Fecha de Ingreso"
             },
             {
