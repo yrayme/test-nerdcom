@@ -3,11 +3,11 @@ import React, { Fragment, useContext, useState } from 'react'
 import { Transition, Dialog } from '@headlessui/react'
 import SidebarDesktop from './SidebarDesktop';
 import { IoMenu } from "react-icons/io5";
-import { SidebarProps } from '@/interfaces/general';
+import { SidebarProps } from '../../../../interfaces/general';
 
 
 
-const SidebarMobile: React.FC<SidebarProps> = ({ pages }) => {
+const SidebarMobile: React.FC<SidebarProps> = ({ pages, setMenu, menu }) => {
     const [isShowing, setIsShowing] = useState(false);
     
     return (
@@ -31,7 +31,7 @@ const SidebarMobile: React.FC<SidebarProps> = ({ pages }) => {
                         
                     <div className="fixed left-0 top-0 h-full w- bg-white z-50 w-48 rounded-tr-lg rounded-br-lg">
                         <Dialog.Panel className="h-screen">
-                            <SidebarDesktop pages={pages} mobile/>
+                            <SidebarDesktop pages={pages} mobile setMenu={setMenu} menu={menu}/>
                         </Dialog.Panel>
                     </div>
                 </Dialog>
